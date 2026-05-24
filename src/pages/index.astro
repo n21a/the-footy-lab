@@ -1,17 +1,333 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
 
+const ladder = [
+  {
+    pos: 1,
+    team: "Fremantle",
+    played: 11,
+    wins: 10,
+    losses: 1,
+    draws: 0,
+    percentage: "135.5",
+    points: 40,
+    logo: "/logos/afl/teams/fremantle.svg",
+  },
+  {
+    pos: 2,
+    team: "Sydney",
+    played: 11,
+    wins: 9,
+    losses: 2,
+    draws: 0,
+    percentage: "142.5",
+    points: 36,
+    logo: "/logos/afl/teams/sydney.svg",
+  },
+  {
+    pos: 3,
+    team: "Geelong",
+    played: 11,
+    wins: 8,
+    losses: 3,
+    draws: 0,
+    percentage: "124.4",
+    points: 32,
+    logo: "/logos/afl/teams/geelong.svg",
+  },
+  {
+    pos: 4,
+    team: "Hawthorn",
+    played: 11,
+    wins: 7,
+    losses: 3,
+    draws: 1,
+    percentage: "110.4",
+    points: 30,
+    logo: "/logos/afl/teams/hawthorn.svg",
+  },
+  {
+    pos: 5,
+    team: "Gold Coast",
+    played: 11,
+    wins: 7,
+    losses: 4,
+    draws: 0,
+    percentage: "116.9",
+    points: 28,
+    logo: "/logos/afl/teams/gold-coast.svg",
+  },
+  {
+    pos: 6,
+    team: "Melbourne",
+    played: 11,
+    wins: 7,
+    losses: 4,
+    draws: 0,
+    percentage: "106.7",
+    points: 28,
+    logo: "/logos/afl/teams/melbourne.svg",
+  },
+  {
+    pos: 7,
+    team: "Adelaide",
+    played: 11,
+    wins: 6,
+    losses: 5,
+    draws: 0,
+    percentage: "107.9",
+    points: 24,
+    logo: "/logos/afl/teams/adelaide.svg",
+  },
+  {
+    pos: 8,
+    team: "Brisbane Lions",
+    played: 11,
+    wins: 6,
+    losses: 5,
+    draws: 0,
+    percentage: "106.6",
+    points: 24,
+    logo: "/logos/afl/teams/brisbane.svg",
+  },
+  {
+    pos: 9,
+    team: "Western Bulldogs",
+    played: 11,
+    wins: 6,
+    losses: 5,
+    draws: 0,
+    percentage: "92.8",
+    points: 24,
+    logo: "/logos/afl/teams/western-bulldogs.svg",
+  },
+  {
+    pos: 10,
+    team: "Collingwood",
+    played: 11,
+    wins: 5,
+    losses: 5,
+    draws: 1,
+    percentage: "100.3",
+    points: 22,
+    logo: "/logos/afl/teams/collingwood.svg",
+  },
+  {
+    pos: 11,
+    team: "St Kilda",
+    played: 11,
+    wins: 5,
+    losses: 6,
+    draws: 0,
+    percentage: "108.2",
+    points: 20,
+    logo: "/logos/afl/teams/st-kilda.svg",
+  },
+  {
+    pos: 12,
+    team: "GWS Giants",
+    played: 11,
+    wins: 5,
+    losses: 6,
+    draws: 0,
+    percentage: "98.6",
+    points: 20,
+    logo: "/logos/afl/teams/gws-giants.svg",
+  },
+  {
+    pos: 13,
+    team: "North Melbourne",
+    played: 11,
+    wins: 5,
+    losses: 6,
+    draws: 0,
+    percentage: "97.6",
+    points: 20,
+    logo: "/logos/afl/teams/north-melbourne.svg",
+  },
+  {
+    pos: 14,
+    team: "Port Adelaide",
+    played: 11,
+    wins: 3,
+    losses: 8,
+    draws: 0,
+    percentage: "100.9",
+    points: 12,
+    logo: "/logos/afl/teams/port-adelaide.svg",
+  },
+  {
+    pos: 15,
+    team: "Carlton",
+    played: 11,
+    wins: 3,
+    losses: 8,
+    draws: 0,
+    percentage: "86.1",
+    points: 12,
+    logo: "/logos/afl/teams/carlton.svg",
+  },
+  {
+    pos: 16,
+    team: "West Coast",
+    played: 11,
+    wins: 3,
+    losses: 8,
+    draws: 0,
+    percentage: "66.1",
+    points: 12,
+    logo: "/logos/afl/teams/west-coast.svg",
+  },
+  {
+    pos: 17,
+    team: "Richmond",
+    played: 11,
+    wins: 2,
+    losses: 9,
+    draws: 0,
+    percentage: "64.5",
+    points: 8,
+    logo: "/logos/afl/teams/richmond.svg",
+  },
+  {
+    pos: 18,
+    team: "Essendon",
+    played: 11,
+    wins: 1,
+    losses: 10,
+    draws: 0,
+    percentage: "70.9",
+    points: 4,
+    logo: "/logos/afl/teams/essendon.svg",
+  },
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="Home"
+  description="the-footy-lab is a beginner-friendly AFL guide."
+>
+  <section class="grid gap-8 lg:grid-cols-[1fr_0.95fr]">
+    <div>
+      <p class="mb-3 text-sm font-semibold uppercase tracking-wide text-emerald-400">
+        Aussie rules, made easier to follow
+      </p>
+
+      <h1 class="max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-5xl">
+        AFL rules, stats and terminology explained clearly.
+      </h1>
+
+      <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
+        <strong class="font-semibold text-white">the-footy-lab</strong> is a
+        beginner-friendly AFL guide. It makes AFL rules, terminology and statistics
+        more open, accessible and easy-to-digest for new fans and existing supporters.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a
+          href="/rules"
+          class="rounded-xl bg-emerald-400 px-5 py-3 text-sm font-semibold text-slate-950 hover:bg-emerald-300"
+        >
+          Learn the rules
+        </a>
+
+        <a
+          href="/ladder"
+          class="rounded-xl border border-slate-700 px-5 py-3 text-sm font-semibold text-slate-100 hover:border-slate-500"
+        >
+          View ladder
+        </a>
+      </div>
+    </div>
+
+    <aside class="rounded-2xl border border-slate-800 bg-slate-900 p-5">
+      <div class="mb-4 flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-lg font-semibold text-white">Current AFL ladder</h2>
+          <p class="mt-1 text-xs text-slate-400"><b>Last updated:<b/> 2026-05-24 (post-Round 11)</p>
+        </div>
+
+        <a href="/ladder" class="text-xs font-semibold text-emerald-400 hover:text-emerald-300">
+          Full ladder
+        </a>
+      </div>
+
+      <div class="max-h-[430px] overflow-y-auto">
+        <table class="w-full text-left text-xs">
+          <thead class="sticky top-0 bg-slate-900 text-slate-400">
+            <tr class="border-b border-slate-800">
+              <th class="py-2 pr-2 font-medium">#</th>
+              <th class="py-2 pr-2 font-medium">Team</th>
+              <th class="py-2 pr-2 text-right font-medium">W-L-D</th>
+              <th class="py-2 pr-2 text-right font-medium">%</th>
+              <th class="py-2 text-right font-medium">Pts</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {
+              ladder.map((team) => (
+                <tr class="border-b border-slate-800/70">
+                  <td class="py-2 pr-2 text-slate-400">{team.pos}</td>
+
+                  <td class="py-2 pr-2">
+                    <div class="flex items-center gap-2">
+                      <img
+                        src={team.logo}
+                        alt={`${team.team} logo`}
+                        class="h-5 w-5 shrink-0 object-contain"
+                      />
+                      <span class="font-medium text-slate-100">{team.team}</span>
+                    </div>
+                  </td>
+
+                  <td class="py-2 pr-2 text-right text-slate-300">
+                    {team.wins}-{team.losses}-{team.draws}
+                  </td>
+
+                  <td class="py-2 pr-2 text-right text-slate-300">
+                    {team.percentage}
+                  </td>
+
+                  <td class="py-2 text-right font-semibold text-white">
+                    {team.points}
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </aside>
+  </section>
+
+  <section
+    id="changelog"
+    class="mt-14 rounded-2xl border border-slate-800 bg-slate-900 p-6"
+  >
+    <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+      <div>
+        <p class="mb-2 text-sm font-semibold uppercase tracking-wide text-emerald-400">
+          Changelog
+        </p>
+
+        <h2 class="text-2xl font-bold tracking-tight text-white">
+          What's new in v0.1?
+        </h2>
+      </div>
+
+      <a
+        href="#changelog"
+        class="w-fit rounded-xl border border-slate-700 px-4 py-2 text-sm font-semibold text-slate-100 hover:border-slate-500"
+      >
+        View changelog
+      </a>
+    </div>
+
+    <ul class="mt-5 grid gap-3 text-sm leading-6 text-slate-300 sm:grid-cols-2 lg:grid-cols-3">
+      <li>Static Astro foundation website</li>
+      <li>Clear homepage and website navigation</li>
+      <li>Static AFL ladder (updated after each round)</li>
+    </ul>
+  </section>
+</BaseLayout>

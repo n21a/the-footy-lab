@@ -1,0 +1,32 @@
+---
+import "../styles/global.css";
+import SiteHeader from "../components/SiteHeader.astro";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "A beginner-friendly guide to the Australian Football League (AFL).",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | the-footy-lab</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-950 text-slate-100">
+    <SiteHeader />
+
+    <main class="mx-auto max-w-6xl px-4 py-10">
+      <slot />
+    </main>
+  </body>
+</html>
