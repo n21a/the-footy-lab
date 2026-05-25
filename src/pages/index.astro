@@ -52,73 +52,76 @@ import ladder from "../data/manual/260524-afl-ladder-round-11.json";
         </a>
       </div>
 
-      <div class="max-h-[430px] overflow-y-auto">
-        <table class="w-full text-left text-xs">
-          <thead class="sticky top-0 bg-[var(--color-surface)] text-[var(--color-text-muted)]">
-            <tr class="border-b border-[var(--color-border)]">
-              <th class="py-2 pr-2 text-center font-medium">#</th>
-              <th class="py-2 pr-2 text-left font-medium">Team</th>
-              <th class="py-2 pr-2 text-center font-medium">W-L-D</th>
-              <th class="py-2 pr-2 text-center font-medium">%</th>
-              <th class="hidden py-2 pr-2 text-center font-medium sm:table-cell">Form</th>
-              <th class="py-2 text-center font-medium">Pts</th>
-            </tr>
-          </thead>
+      <div class="relative">
+        <div class="scrollbar-hidden max-h-[430px] overflow-y-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="sticky top-0 bg-[var(--color-surface)] text-[var(--color-text-muted)]">
+              <tr class="border-b border-[var(--color-border)]">
+                <th class="py-2 pr-2 text-center font-medium">#</th>
+                <th class="py-2 pr-2 text-left font-medium">Team</th>
+                <th class="py-2 pr-2 text-center font-medium">W-L-D</th>
+                <th class="py-2 pr-2 text-center font-medium">%</th>
+                <th class="hidden py-2 pr-2 text-center font-medium sm:table-cell">Form</th>
+                <th class="py-2 text-center font-medium">Pts</th>
+              </tr>
+            </thead>
 
-          <tbody>
-            {
-              ladder.map((team) => (
-                <tr class="border-b border-[var(--color-border)]">
-                  <td class="py-2 pr-2 text-center text-[var(--color-text-muted)]">{team.position}</td>
+            <tbody>
+              {
+                ladder.map((team) => (
+                  <tr class="border-b border-[var(--color-border)]">
+                    <td class="py-2 pr-2 text-center text-[var(--color-text-muted)]">{team.position}</td>
 
-                  <td class="py-2 pr-2">
-                    <div class="flex items-center gap-2">
-                      <img
-                        src={team.logo}
-                        alt={`${team.team} logo`}
-                        class="h-5 w-5 shrink-0 object-contain"
-                      />
-                      <span class="font-medium text-left text-[var(--color-text)]">{team.team}</span>
-                    </div>
-                  </td>
+                    <td class="py-2 pr-2">
+                      <div class="flex items-center gap-2">
+                        <img
+                          src={team.logo}
+                          alt={`${team.team} logo`}
+                          class="h-5 w-5 shrink-0 object-contain"
+                        />
+                        <span class="font-medium text-left text-[var(--color-text)]">{team.team}</span>
+                      </div>
+                    </td>
 
-                  <td class="py-2 pr-2 text-center text-[var(--color-text-muted)]">
-                    {team.wins}-{team.losses}-{team.draws}
-                  </td>
+                    <td class="py-2 pr-2 text-center text-[var(--color-text-muted)]">
+                      {team.wins}-{team.losses}-{team.draws}
+                    </td>
 
-                  <td class="py-2 pr-2 text-center text-[var(--color-text-muted)]">
-                    {team.percentage}
-                  </td>
+                    <td class="py-2 pr-2 text-center text-[var(--color-text-muted)]">
+                      {team.percentage}
+                    </td>
 
-                  <td class="hidden py-2 pr-2 text-center sm:table-cell">
-                    <div class="flex justify-end gap-1">
-                      {
-                        team.form.slice(-5).map((result) => (
-                          <span
-                            class:list={[
-                              "flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold text-white",
-                              result === "W" && "bg-green-600",
-                              result === "L" && "bg-red-600",
-                              result === "D" && "bg-amber-500",
-                            ]}
-                            title={result === "W" ? "Win" : result === "L" ? "Loss" : "Draw"}
-                            aria-label={result === "W" ? "Win" : result === "L" ? "Loss" : "Draw"}
-                          >
-                            {result}
-                          </span>
-                        ))
-                      }
-                    </div>
-                  </td>
+                    <td class="hidden py-2 pr-2 text-center sm:table-cell">
+                      <div class="flex justify-end gap-1">
+                        {
+                          team.form.slice(-5).map((result) => (
+                            <span
+                              class:list={[
+                                "flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold text-white",
+                                result === "W" && "bg-green-600",
+                                result === "L" && "bg-red-600",
+                                result === "D" && "bg-amber-500",
+                              ]}
+                              title={result === "W" ? "Win" : result === "L" ? "Loss" : "Draw"}
+                              aria-label={result === "W" ? "Win" : result === "L" ? "Loss" : "Draw"}
+                            >
+                              {result}
+                            </span>
+                          ))
+                        }
+                      </div>
+                    </td>
 
-                  <td class="py-2 text-center font-semibold text-[var(--color-text)]">
-                    {team.premiershipPoints}
-                  </td>
-                </tr>
-              ))
-            }
-          </tbody>
-        </table>
+                    <td class="py-2 text-center font-semibold text-[var(--color-text)]">
+                      {team.premiershipPoints}
+                    </td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+        <div class="pointer-events none absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-[var(--color-surface)] to-transparent"></div>
       </div>
     </aside>
   </section>
