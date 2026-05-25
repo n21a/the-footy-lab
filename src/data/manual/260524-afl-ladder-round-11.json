@@ -2,6 +2,7 @@
     {
         "position": 1,
         "team": "Fremantle",
+        "slug": "fremantle",
         "played": 11,
         "wins": 10,
         "losses": 1,
@@ -17,6 +18,7 @@
     {
         "position": 2,
         "team": "Sydney",
+        "slug": "sydney",
         "played": 11,
         "wins": 9,
         "losses": 2,
@@ -32,6 +34,7 @@
     {
         "position": 3,
         "team": "Geelong",
+        "slug": "geelong",
         "played": 11,
         "wins": 8,
         "losses": 3,
@@ -47,6 +50,7 @@
     {
         "position": 4,
         "team": "Hawthorn",
+        "slug": "hawthorn",
         "played": 11,
         "wins": 7,
         "losses": 3,
@@ -62,6 +66,7 @@
     {
         "position": 5,
         "team": "Gold Coast",
+        "slug": "gold-coast",
         "played": 11,
         "wins": 7,
         "losses": 4,
@@ -77,6 +82,7 @@
     {
         "position": 6,
         "team": "Melbourne",
+        "slug": "melbourne",
         "played": 11,
         "wins": 7,
         "losses": 4,
@@ -92,6 +98,7 @@
     {
         "position": 7,
         "team": "Adelaide",
+        "slug": "adelaide",
         "played": 11,
         "wins": 6,
         "losses": 5,
@@ -107,6 +114,7 @@
     {
         "position": 8,
         "team": "Brisbane",
+        "slug": "brisbane",
         "played": 11,
         "wins": 6,
         "losses": 5,
@@ -122,6 +130,7 @@
     {
         "position": 9,
         "team": "Western Bulldogs",
+        "slug": "western-bulldogs",
         "played": 11,
         "wins": 6,
         "losses": 5,
@@ -137,6 +146,7 @@
     {
         "position": 10,
         "team": "Collingwood",
+        "slug": "collingwood",
         "played": 11,
         "wins": 5,
         "losses": 5,
@@ -152,6 +162,7 @@
     {
         "position": 11,
         "team": "St. Kilda",
+        "slug": "st-kilda",
         "played": 11,
         "wins": 5,
         "losses": 6,
@@ -167,6 +178,7 @@
     {
         "position": 12,
         "team": "GWS Giants",
+        "slug": "gws-giants",
         "played": 11,
         "wins": 5,
         "losses": 6,
@@ -182,6 +194,7 @@
     {
         "position": 13,
         "team": "North Melbourne",
+        "slug": "north-melbourne",
         "played": 11,
         "wins": 5,
         "losses": 6,
@@ -197,6 +210,7 @@
     {
         "position": 14,
         "team": "Port Adelaide",
+        "slug": "port-adelaide",
         "played": 11,
         "wins": 3,
         "losses": 8,
@@ -212,6 +226,7 @@
     {
         "position": 15,
         "team": "Carlton",
+        "slug": "carlton",
         "played": 11,
         "wins": 3,
         "losses": 8,
@@ -226,7 +241,8 @@
     },
     {
         "position": 16,
-        "team": "West Coast Eagles",
+        "team": "West Coast",
+        "slug": "west-coast",
         "played": 11,
         "wins": 3,
         "losses": 8,
@@ -242,6 +258,7 @@
     {
         "position": 17,
         "team": "Richmond",
+        "slug": "richmond",
         "played": 11,
         "wins": 2,
         "losses": 9,
@@ -257,6 +274,7 @@
     {
         "position": 18,
         "team": "Essendon",
+        "slug": "essendon",
         "played": 11,
         "wins": 1,
         "losses": 10,
