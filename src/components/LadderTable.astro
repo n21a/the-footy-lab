@@ -2,6 +2,7 @@
 interface LadderTeam {
     position: number;
     team: string;
+    slug: string;
     played: number;
     wins: number;
     losses: number;
@@ -12,6 +13,7 @@ interface LadderTeam {
     premiershipPoints: number;
     logo: string;
     form: string[];
+    upNext: string;
 }
 
 interface Props {
@@ -21,6 +23,7 @@ interface Props {
 
 const { ladder, variant = "compact"} = Astro.props;
 const isCompact = variant === "compact";
+const columnCount = 6;
 ---
 
 <div class="relative">
@@ -43,18 +46,25 @@ const isCompact = variant === "compact";
         <tbody>
             {
             ladder.map((team) => (
+                <>
                 <tr class="border-b border-[var(--color-border)]">
                 <td class="py-2 pr-2 text-center text-[var(--color-text-muted)]">{team.position}</td>
 
                 <td class="py-2 pr-2">
-                    <div class="flex items-center gap-2">
-                    <img
-                        src={team.logo}
-                        alt={`${team.team} logo`}
-                        class="h-5 w-5 shrink-0 object-contain"
-                    />
-                    <span class="font-medium text-left text-[var(--color-text)]">{team.team}</span>
-                    </div>
+                    <a
+                        href={`/teams/${team.slug}`}
+                        class="group flex items-center gap-2 text-[var(--color-text)] hover:text-[var(--color-text-muted)]"
+                    >
+                        <img
+                            src={team.logo}
+                            alt={`${team.team} logo`}
+                            class="h-5 w-5 object-contain group-hover:opacity-80"
+                        />
+                        
+                        <span class="text-left font-medium text-[var(--color-text)] underline decoration-transparent underline offset-4 group-hover:decoration-[var(--color-accent)]">
+                            {team.team}
+                        </span>
+                    </a>
                 </td>
 
                 <td class="py-2 pr-2 text-center text-[var(--color-text-muted)]">
@@ -90,6 +100,25 @@ const isCompact = variant === "compact";
                     {team.premiershipPoints}
                 </td>
                 </tr>
+                {
+                    team.position === 6 && (
+                        <tr class="border-b border-[var(--color-accent)]">
+                            <td colspan={columnCount} class="py-2 text-xs font-semibold text-[var(--color-accent)]">
+                                Top 6: qualify directly for the 2026 AFL finals
+                            </td>
+                        </tr>
+                    )
+                }
+                {
+                    team.position === 10 && (
+                        <tr class="border-b border-[var(--color-border)]">
+                            <td colspan={columnCount} class="py-2 text-xs font-semibold text-[var(--color-text-muted)]">
+                                Positions 7-10: wildcard finals places
+                            </td>
+                        </tr>
+                    )
+                }
+                </>
             ))
             }
         </tbody>

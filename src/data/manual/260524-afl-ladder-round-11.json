@@ -13,7 +13,8 @@
         "premiershipPoints": 40,
         "logo": "/assets/logos/afl/teams/icons/fremantle.jpeg",
         "form": ["L", "W", "W", "W", "W", "W",
-                "W", "W", "W", "W", "W"]
+                "W", "W", "W", "W", "W"],
+        "upNext": "brisbane"
     },
     {
         "position": 2,
@@ -29,7 +30,8 @@
         "premiershipPoints": 36,
         "logo": "/assets/logos/afl/teams/icons/sydney.jpeg",
         "form": ["W", "W", "L", "W", "W", "W",
-                "W", "W", "W", "W", "L"]
+                "W", "W", "W", "W", "L"],
+        "upNext": "richmond"
     },
     {
         "position": 3,
@@ -45,7 +47,8 @@
         "premiershipPoints": 32,
         "logo": "/assets/logos/afl/teams/icons/geelong.jpeg",
         "form": ["L", "W", "W", "L", "W", "W",
-                "L", "W", "W", "W", "W"]
+                "L", "W", "W", "W", "W"],
+        "upNext": "carlton"
     },
     {
         "position": 4,
@@ -61,7 +64,8 @@
         "premiershipPoints": 30,
         "logo": "/assets/logos/afl/teams/icons/hawthorn.jpeg",
         "form": ["L", "W", "W", "W", "W", "W",
-                "W", "D", "L", "L", "W"]
+                "W", "D", "L", "L", "W"],
+        "upNext": "st-kilda"
     },
     {
         "position": 5,
@@ -77,7 +81,8 @@
         "premiershipPoints": 28,
         "logo": "/assets/logos/afl/teams/icons/gold-coast.jpeg",
         "form": ["W", "W", "W", "L", "L", "W",
-                "L", "W", "W", "W", "L"]
+                "L", "W", "W", "W", "L"],
+        "upNext": "bye"
     },
     {
         "position": 6,
@@ -93,7 +98,8 @@
         "premiershipPoints": 28,
         "logo": "/assets/logos/afl/teams/icons/melbourne.png",
         "form": ["W", "L", "W", "W", "L", "W",
-                "W", "L", "W", "W", "L"]
+                "W", "L", "W", "W", "L"],
+        "upNext": "gws-giants"
     },
     {
         "position": 7,
@@ -109,7 +115,8 @@
         "premiershipPoints": 24,
         "logo": "/assets/logos/afl/teams/icons/adelaide.jpeg",
         "form": ["W", "L", "L", "L", "W", "W",
-                "L", "W", "W", "W", "L"]
+                "L", "W", "W", "W", "L"],
+        "upNext": "bye"
     },
     {
         "position": 8,
@@ -125,7 +132,8 @@
         "premiershipPoints": 24,
         "logo": "/assets/logos/afl/teams/icons/brisbane.jpeg",
         "form": ["L", "L", "W", "W", "W", "L",
-                "W", "W", "W", "L", "L"]
+                "W", "W", "W", "L", "L"],
+        "upNext": "fremantle"
     },
     {
         "position": 9,
@@ -141,7 +149,8 @@
         "premiershipPoints": 24,
         "logo": "/assets/logos/afl/teams/icons/western-bulldogs.jpeg",
         "form": ["W", "W", "W", "W", "L", "L",
-                "L", "L", "W", "L", "W"]
+                "L", "L", "W", "L", "W"],
+        "upNext": "collingwood"
     },
     {
         "position": 10,
@@ -157,7 +166,8 @@
         "premiershipPoints": 22,
         "logo": "/assets/logos/afl/teams/icons/collingwood.jpeg",
         "form": ["W", "L", "W", "L", "L", "W",
-                "W", "D", "L", "L", "W"]
+                "W", "D", "L", "L", "W"],
+        "upNext": "western-bulldogs"
     },
     {
         "position": 11,
@@ -173,7 +183,8 @@
         "premiershipPoints": 20,
         "logo": "/assets/logos/afl/teams/icons/st-kilda.jpeg",
         "form": ["L", "L", "W", "L", "W", "L",
-                "W", "W", "L", "W", "L"]
+                "W", "W", "L", "W", "L"],
+        "upNext": "hawthorn"
     },
     {
         "position": 12,
@@ -189,7 +200,8 @@
         "premiershipPoints": 20,
         "logo": "/assets/logos/afl/teams/icons/gws-giants.jpeg",
         "form": ["W", "L", "L", "L", "W", "L",
-                "W", "L", "W", "L", "W"]
+                "W", "L", "W", "L", "W"],
+        "upNext": "melbourne"
     },
     {
         "position": 13,
@@ -205,7 +217,8 @@
         "premiershipPoints": 20,
         "logo": "/assets/logos/afl/teams/icons/north-melbourne.jpeg",
         "form": ["W", "L", "W", "W", "L", "W",
-                "L", "L", "L", "L", "W"]
+                "L", "L", "L", "L", "W"],
+        "upNext": "bye"
     },
     {
         "position": 14,
@@ -221,7 +234,8 @@
         "premiershipPoints": 12,
         "logo": "/assets/logos/afl/teams/icons/port-adelaide.jpeg",
         "form": ["L", "W", "L", "W", "L", "L",
-                "W", "L", "L", "L", "L"]
+                "W", "L", "L", "L", "L"],
+        "upNext": "bye"
     },
     {
         "position": 15,
@@ -237,7 +251,8 @@
         "premiershipPoints": 12,
         "logo": "/assets/logos/afl/teams/icons/carlton.jpeg",
         "form": ["L", "W", "L", "L", "L", "L",
-                "L", "L", "L", "W", "W"]
+                "L", "L", "L", "W", "W"],
+        "upNext": "geelong"
     },
     {
         "position": 16,
@@ -253,7 +268,8 @@
         "premiershipPoints": 12,
         "logo": "/assets/logos/afl/teams/icons/west-coast.jpeg",
         "form": ["L", "W", "W", "L", "L", "L",
-                "L", "L", "L", "W", "L"]
+                "L", "L", "L", "W", "L"],
+        "upNext": "essendon"
     },
     {
         "position": 17,
@@ -269,7 +285,8 @@
         "premiershipPoints": 8,
         "logo": "/assets/logos/afl/teams/icons/richmond.jpeg",
         "form": ["L", "L", "L", "L", "L", "L",
-                "L", "W", "L", "L", "W"]
+                "L", "W", "L", "L", "W"],
+        "upNext": "sydney"
     },
     {
         "position": 18,
@@ -285,6 +302,7 @@
         "premiershipPoints": 4,
         "logo": "/assets/logos/afl/teams/icons/essendon.jpeg",
         "form": ["L", "L", "L", "L", "W", "L",
-                "L", "L", "L", "L", "L"]
+                "L", "L", "L", "L", "L"],
+        "upNext": "west-coast"
     }
 ]

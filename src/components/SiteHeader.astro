@@ -1,9 +1,12 @@
 ---
+import { hash } from "astro:schema";
 import ThemeToggle from "./ThemeToggle.astro";
 
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/ladder", label: "Ladder" },
+  { href: "/teams", label: "Teams" },
+  { href: "/venues", label: "Venues" },
   { href: "/rules", label: "Rules" },
   { href: "/glossary", label: "Glossary" },
   { href: "/stats", label: "Stats" },

@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import LadderTable from "../components/LadderTable.astro";
+import ladder from "../data/manual/260524-afl-ladder-round-11.json";
 ---
 
 <BaseLayout title="AFL ladder">
@@ -11,8 +13,23 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     AFL ladder
   </h1>
 
-  <p class="mt-5 max-w-2xl text-lg leading-8 text-[var(--color-text-muted)]">
-    Coming soon. This page will have an AFL ladder that automatically
-    updates as events take place. A static AFL ladder is on the homepage.
+  <p class="mt-5 max-w-3xl text-lg leading-8 text-[var(--color-text-muted)]">
+    The AFL ladder ranks teams during the home-and-away season. Teams are ordered
+    by premiership points, then percentage when teams are level on points.
   </p>
+
+  <p class="mt-4 max-w-3xl text-sm leading-6 text-[var(--color-text-muted)]">
+    In 2026, the top six teams qualify directly for finals. Teams placed seventh
+    to tenth enter a wildcard round, with two winners joining the usual top-eight
+    finals series.
+  </p>
+
+  <p class="mt-4 max-w-3xl text-sm leading-6 text-[var(--color-text-muted)]">
+    This ladder is manually maintained for now and will later be replaced by
+    public data ingestion.
+  </p>
+
+  <section class="mt-8 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5">
+    <LadderTable ladder={ladder} variant="full" />
+  </section>
 </BaseLayout>
